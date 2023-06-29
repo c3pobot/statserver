@@ -10,5 +10,12 @@
     "prod": "chmod a+x buildprodimage.sh && ./buildprodimage.sh c3pobot/worker"
   },
   "author": "scuba75",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7",
+    "statcalc": "github:c3pobot/statcalc"
+  }
 }
