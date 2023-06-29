@@ -1,0 +1,11 @@
+{
+  "name": "statserver",
+  "version": "1.0.0",
+  "description": "stat server for c3po bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "scuba75",
+  "license": "ISC"
+}
