@@ -1,8 +1,8 @@
 'use strict'
 const path = require('path')
-const PRIVATE_DATA_URI = process.env.PRIVATE_GITHUB_REPO_RAW_URL
+const PRIVATE_GITHUB_REPO_RAW_URL = process.env.PRIVATE_GITHUB_REPO_RAW_URL
 const fetch = require('node-fetch')
-const parseResponse = async(obj)=>{
+const parseResponse = async(res)=>{
   try{
     let body
     if (res?.status?.toString().startsWith('2')){
@@ -23,7 +23,7 @@ module.exports = async(file, method = 'GET', body, headers)=>{
       payload.headers['Content-Type'] = 'application/json'
     }
 
-    let obj = await fetch(path.join(PRIVATE_DATA_URI, file))
+    let obj = await fetch(path.join(PRIVATE_GITHUB_REPO_RAW_URL, file))
     return await parseResponse(obj)
   }catch(e){
     throw(e)
